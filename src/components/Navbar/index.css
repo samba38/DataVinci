@@ -13,7 +13,7 @@
   }
 
   .nav-container {
-    display: none; /* ❌ hide mobile navbar */
+    display: none;
   }
 
   .nav-container-desktop-thin-card {
@@ -62,18 +62,18 @@
   .nav-container {
     background-color: white;
     padding: 20px;
-    width: 100vw;
+    width: 110vw;
     height: 56.7px;
     top: 10px;
     left: 20px;
-    display: flex; /* ✅ show mobile navbar */
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }
 
   .nav-container-desktop {
-    display: none; /* ❌ hide desktop navbar */
+    display: none;
   }
 
   .nav-img {

@@ -8,6 +8,7 @@ const Navbar = () => {
   }
   return (
     <>
+      {/* This is mobile Navbar */}
       <div>
         <nav className="nav-container">
           <img
@@ -53,7 +54,8 @@ const Navbar = () => {
         )}
       </div>
 
-      <navbar className="nav-container-desktop">
+      {/* This is deskTop Navbar */}
+      <nav className="nav-container-desktop">
         <div className="nav-container-desktop-thin-card">
           <p className="nav-container-desktop-heading">
             WHICH MANUKA IS FOR ME?
@@ -87,7 +89,7 @@ const Navbar = () => {
             alt="cart"
           />
         </div>
-      </navbar>
+      </nav>
     </>
   )
 }

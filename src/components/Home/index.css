@@ -1,9 +1,10 @@
 @media (min-width: 1400px) {
+  /* for desktop application */
   .home-container-desktop {
-    background-color: transparent;
     display: flex;
-    height: 220vh;
-    
+    height: 300vh;
+    background-color: #fbf9f6;
+
     justify-content: center;
   }
   .home-container {
@@ -13,7 +14,7 @@
   }
   .home-container-desktop-img-card {
     width: 585px;
-    height: 1547px;
+    height: 1600px;
     top: 35.55px;
     left: 70px;
   }
@@ -25,16 +26,19 @@
     list-style-type: none;
   }
   .home-container-desktop-list-img {
-    width: 150px;
-    height: 150px;
+    width: 160px;
+    height: 160px;
+    margin: 3px;
   }
   .home-container-desktop-list-img2 {
-    width: 400px;
-    height: 200px;
+    width: 420px;
+    height: 220px;
+    margin: 3px;
   }
   .home-container-desktop-list-img3 {
-    width: 190px;
-    height: 190px;
+    width: 200px;
+    height: 200px;
+    margin: 3px;
   }
 
   .home-container-desktop-content-card {
@@ -52,12 +56,14 @@
     font-size: 40px;
   }
   .home-container-desktop-content-btn {
-    width: 196px;
-    height: 45px;
-    background-color: #66666626;
-    top: 204.47px;
-    border-width: 0px;
-    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    border-radius: 10px;
   }
   .home-container-desktop-content-info-wrapper {
     display: flex;
@@ -146,11 +152,12 @@
     line-height: 23.94px;
   }
   .home-container-desktop-content-optim-paragraph {
-    color: #313131;
-    font-family: Segoe UI;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 23.94px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 0;
+    font-size: 16px;
+    color: #333;
   }
   .home-container-desktop-content-optim-heart {
     width: 108.25px;
@@ -170,10 +177,11 @@
 }
 
 @media (max-width: 390px) {
+  /* for mobile application */
   .home-container {
-    background-color: transparent;
     height: 150vh;
     display: block;
+    background-color: transparent;
   }
   .home-container-desktop {
     background-color: transparent;

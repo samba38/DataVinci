@@ -1,13 +1,24 @@
-import React, {useState} from 'react'
+import {useState} from 'react'
 import './index.css'
+
 const Cart = () => {
   const [weight, setWeight] = useState('')
+  const [count, setCount] = useState(1)
+  const increase = () => {
+    setCount(count + 1)
+  }
+
+  const decrease = () => {
+    if (count > 0) {
+      setCount(count - 1)
+    }
+  }
   return (
     <>
       <h1 className="cart-payment-heading">PAYMENT OPTIONS (SELECT ONE)</h1>
       <div className="cart-subscription-card">
         <div className="cart-subscription-sider">
-          <button className="cart-subscription-btn">
+          <button className="cart-subscription-btn" type="button">
             <div className="cart-subscription-card-purchase">
               <p className="cart-subscription-card-purchase-para">
                 One-time <br />
@@ -19,7 +30,7 @@ const Cart = () => {
               </p>
             </div>
           </button>
-          <button className="cart-subscription-btn">
+          <button className="cart-subscription-btn" type="button">
             <div className="cart-subscription-card-purchase2">
               <p className="cart-subscription-card-purchase-para2">
                 Subscribe & save <br />
@@ -34,36 +45,59 @@ const Cart = () => {
         </div>
 
         <p className="cart-payment-subscription">
-          <img src="https://res.cloudinary.com/dqpacvvei/image/upload/v1756605709/SVG_bxtysc.png" />
+          <img
+            src="https://res.cloudinary.com/dqpacvvei/image/upload/v1756605709/SVG_bxtysc.png"
+            alt="load"
+            className="cart-payment-load-img"
+          />
           What is a Subscription?
         </p>
       </div>
       <h1 className="cart-select-quantity-heading">SELECT QUANTITY</h1>
       <div className="cart-btn-row">
         <div className="cart-select-quantity-card">
-          <button className="cart-select-quantity-btn">+</button>
-          <p>1</p>
-          <button className="cart-select-quantity-btn">-</button>
+          <button
+            className="cart-select-quantity-btn"
+            type="button"
+            onClick={decrease}
+          >
+            -
+          </button>
+          <p>{count}</p>
+          <button
+            className="cart-select-quantity-btn"
+            type="button"
+            onClick={increase}
+          >
+            +
+          </button>
         </div>
         <button className="cart-add-btn">Add to cart</button>
       </div>
       <div className="cart-beauty-bundle-card">
         <div className="cart-beauty-bundle-card-row">
-          <img
-            src="https://res.cloudinary.com/dqpacvvei/image/upload/v1756558165/Button_-_Previous_slide_SVG_xynaua.png"
-            className="beauty-bundle-backword-front-img"
-          />
+          <button className="back-and-forward-btns" type="button">
+            <img
+              src="https://res.cloudinary.com/dqpacvvei/image/upload/v1756558165/Button_-_Previous_slide_SVG_xynaua.png"
+              className="beauty-bundle-backword-front-img"
+              alt="back"
+            />
+          </button>
           <p className="beauty-bundle-paragraph">Beauty Bundle</p>
-          <img
-            src="https://res.cloudinary.com/dqpacvvei/image/upload/v1756558216/Button_-_Next_slide_SVG_n7cz4u.png"
-            className="beauty-bundle-backword-front-img"
-          />
+          <button className="back-and-forward-btns" type="button">
+            <img
+              src="https://res.cloudinary.com/dqpacvvei/image/upload/v1756558216/Button_-_Next_slide_SVG_n7cz4u.png"
+              className="beauty-bundle-backword-front-img"
+              alt="forword"
+            />
+          </button>
         </div>
         <div className="beauty-bundle-product-items">
           <div>
             <img
               src="https://res.cloudinary.com/dqpacvvei/image/upload/v1756608961/066620652678ace2a8b18d99958799a6750696c0_unhpqq.png"
               className="beauty-bundle-images"
+              alt="items"
             />
             <p className="beauty-bundle-product-para">UMF 20+</p>
             <select
@@ -83,6 +117,7 @@ const Cart = () => {
             <img
               src="https://res.cloudinary.com/dqpacvvei/image/upload/v1756609016/327394c3fd8ec3ec3d902b06fa874c76353a27e5_dmqcap.png"
               className="beauty-bundle-images"
+              alt="items"
             />
             <p className="beauty-bundle-product-para">UMF 24+</p>
             <select
@@ -102,6 +137,7 @@ const Cart = () => {
             <img
               src="https://res.cloudinary.com/dqpacvvei/image/upload/v1756609086/999979079a923079d63d37a1077ca3eeb88fd930_nbyqvl.png"
               className="beauty-bundle-images"
+              alt="addingList"
             />
             <p className="beauty-bundle-product-para">Wooden Spoon</p>
           </div>
@@ -122,11 +158,12 @@ const Cart = () => {
           <img
             src="https://res.cloudinary.com/dqpacvvei/image/upload/v1756621822/a4ae2eaca1629c3adae1c7714b22764214572002_eko3xo.png"
             className="delivery-details-img"
+            alt="deliveryIcon"
           />
           <p className="beauty-bundle-product-page-discription">
             Colourclub members earn up to
             <span className="beauty-bundle-product-page-span"> 56 </span> reward
-            points when buy this item. <a href="#">Sign up or log in</a>
+            points when buy this item. Sign up or log in
           </p>
         </div>
         <div className="delivery-estimation-card">
@@ -150,11 +187,13 @@ const Cart = () => {
           <img
             src="https://res.cloudinary.com/dqpacvvei/image/upload/v1756623476/Vector_nuxp8y.png"
             className="delivery-dollor-icon"
+            alt="doller"
           />
           <p className="after-pay">AfterPay</p>
           <img
             src="https://res.cloudinary.com/dqpacvvei/image/upload/v1756561515/SVG_avy8rk.png"
             className="icon-after-pay"
+            alt="afterPay"
           />
         </div>
         <hr />

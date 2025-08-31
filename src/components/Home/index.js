@@ -16,54 +16,52 @@ const Home = () => {
     setOpen(false)
   }
 
-  const infoRender = () => {
-    return (
-      <div className="info-wrapper">
-        <div className="info-card">
-          <p>
-            <span className="bold">UMF</span> is the strength and purity rating
-            of Manuka honey.
-          </p>
-          <div className="values-row">
-            <p className="val orange">10+</p>
-            <p className="hone-liner"></p>
-            <p className="val red">15+</p>
-            <p className="val pink">20+</p>
-            <p className="val purple">24+</p>
-            <p className="val green">26+</p>
-            <p className="val dark-green">28+</p>
-            <p className="val blue">30+</p>
-          </div>
-          <p className="desc">
-            The higher the number, the greater the potency and rarity of Manuka
-            honey.
-          </p>
+  const infoRender = () => (
+    <div className="info-wrapper">
+      <div className="info-card">
+        <p>
+          <span className="bold">UMF</span> is the strength and purity rating of
+          Manuka honey.
+        </p>
+        <div className="values-row">
+          <p className="val orange">10+</p>
+          <p className="hone-liner" />
+          <p className="val red">15+</p>
+          <p className="val pink">20+</p>
+          <p className="val purple">24+</p>
+          <p className="val green">26+</p>
+          <p className="val dark-green">28+</p>
+          <p className="val blue">30+</p>
         </div>
-        <div className="info-card">
-          <p>
-            <span className="bold">MGO</span> is the key natural compound that
-            gives Manuka honey its special antibacterial strength.
-          </p>
-          <div className="values-row">
-            <span className="val orange">263+</span>
-            <span className="val red">514+</span>
-            <span className="val pink">829+</span>
-            <span className="val purple">1122+</span>
-            <span className="val light-blue">1282+</span>
-            <span className="val green">1450+</span>
-            <span className="val dark-blue">1620+</span>
-          </div>
-          <p className="desc">
-            The higher the number, the higher the antibacterial properties in
-            the honey.
-          </p>
-        </div>
-        <button className="close-btn" type="button" onClick={onGoBack}>
-          Close
-        </button>
+        <p className="desc">
+          The higher the number, the greater the potency and rarity of Manuka
+          honey.
+        </p>
       </div>
-    )
-  }
+      <div className="info-card">
+        <p>
+          <span className="bold">MGO</span> is the key natural compound that
+          gives Manuka honey its special antibacterial strength.
+        </p>
+        <div className="values-row">
+          <span className="val orange">263+</span>
+          <span className="val red">514+</span>
+          <span className="val pink">829+</span>
+          <span className="val purple">1122+</span>
+          <span className="val light-blue">1282+</span>
+          <span className="val green">1450+</span>
+          <span className="val dark-blue">1620+</span>
+        </div>
+        <p className="desc">
+          The higher the number, the higher the antibacterial properties in the
+          honey.
+        </p>
+      </div>
+      <button className="close-btn" type="button" onClick={onGoBack}>
+        Close
+      </button>
+    </div>
+  )
   return (
     <>
       <Navbar />
@@ -80,6 +78,7 @@ const Home = () => {
           <img
             src="https://res.cloudinary.com/dqpacvvei/image/upload/v1756561515/SVG_avy8rk.png"
             className="btn-img-home"
+            alt="icon"
           />
           What is UMF and MGO?
         </button>
@@ -88,21 +87,25 @@ const Home = () => {
           <img
             src="https://res.cloudinary.com/dqpacvvei/image/upload/v1756556783/Link_Manuka_Honey_UMF_24___MGO_1122_ieil6w.png"
             className="home-medic-img"
+            alt="UMFmedico"
           />
           <img
             src="https://res.cloudinary.com/dqpacvvei/image/upload/v1756556783/Link_Manuka_Honey_UMF_24___MGO_1122_ieil6w.png"
             className="home-medic-img"
+            alt="UMFmedico"
           />
           <img
             src="https://res.cloudinary.com/dqpacvvei/image/upload/v1756564056/d07b7562a11ef9ede254e5ffddc9a19e57a99608_nfpnu0.png"
             className="home-medic-img"
+            alt="UMFmedico"
           />
         </div>
       </div>
 
       <div className="home-container-desktop">
         <div className="home-container-desktop-img-card">
-          <Sliders />
+          <Sliders />{' '}
+          {/*  sliders to show images when click on forward and back (Imported) */}
           <ul className="home-container-desktop-unorder-list">
             <li className="home-container-desktop-list home-container-border">
               <img
@@ -174,6 +177,7 @@ const Home = () => {
                   <img
                     src="https://res.cloudinary.com/dqpacvvei/image/upload/v1756561515/SVG_avy8rk.png"
                     className="btn-img-home"
+                    alt="trigger"
                   />
                   What is UMF and MGO?
                 </button>
@@ -189,7 +193,7 @@ const Home = () => {
                       </p>
                       <div className="home-container-desktop-content-values-row">
                         <p className="val orange">10+</p>
-                        <p className="hone-liner"></p>
+                        <p className="hone-liner" />
                         <p className="val red">15+</p>
                         <p className="val pink">20+</p>
                         <p className="val purple">24+</p>
@@ -242,17 +246,18 @@ const Home = () => {
               <img
                 src="https://res.cloudinary.com/dqpacvvei/image/upload/v1756600094/Container_xwjj4z.png"
                 className="home-container-desktop-content-optim-heart"
+                alt="hearts"
               />
               825 Reviews
             </p>
           </div>
           <p className="home-container-desktop-content-optim-description">
-            For those times in life when quality comes first. This pure UMF™
-            24+ Manuka Honey is powerfully active, sourced from wild and rugged
+            For those times in life when quality comes first. This pure UMF™ 24+
+            Manuka Honey is powerfully active, sourced from wild and rugged
             locations around Aotearoa New Zealand and great for almost all uses.
             It has a full, delicious flavour and your body will love you for it.
           </p>
-          <ImagesSection />
+          <ImagesSection /> {/* images and cart items */}
           <Cart />
         </div>
       </div>

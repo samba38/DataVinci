@@ -1,11 +1,9 @@
-import  Home from './components/Home'
+import Home from './components/Home'
 import './App.css'
 
-const App = () => {
-  return (
-    <>
-      <Home />
-    </>
-  )
-}
+const App = () => (
+  <>
+    <Home />
+  </>
+)
 export default App
