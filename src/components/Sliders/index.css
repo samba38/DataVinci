@@ -1,0 +1,38 @@
+.slider-wrapper {
+  width: 332.5px;
+  height: 333px;
+  top: 76.7px;
+  left: 20px;
+  background-color: white;
+  background-image: url('https://res.cloudinary.com/dqpacvvei/image/upload/v1756556795/bbfc340adb505a6e94ea39dd3b54bab5e989edea_lnc6y0.png');
+  background-size: cover;
+  display: flex;
+}
+.slider-btn {
+  background-color: transparent;
+  border-width: 0px;
+  outline: none;
+}
+
+@media (max-width: 390px) {
+  .slider-wrapper {
+    width: 332.5px;
+    height: 333px;
+    top: 76.7px;
+    left: 20px;
+    background-color: white;
+    background-image: url('https://res.cloudinary.com/dqpacvvei/image/upload/v1756556795/bbfc340adb505a6e94ea39dd3b54bab5e989edea_lnc6y0.png');
+    background-size: cover;
+    display: flex;
+  }
+  .slider-btn {
+    background-color: transparent;
+    border-width: 0px;
+    outline: none;
+  }
+
+  .slider-front-back {
+    width: 18px;
+    height: 40px;
+  }
+}

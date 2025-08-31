@@ -1,0 +1,46 @@
+.home-desktop-image-unorder-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.home-desktop-image-list {
+  list-style-type: none;
+  margin: 15px;
+}
+
+.home-desktop-images {
+  width: 70px;
+  height: 70px;
+}
+
+.home-desktop-image-para {
+  color: #313131;
+  font-family: Segoe UI;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.home-desktop-image-para2 {
+  color: #313131;
+  font-family: Segoe UI;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.home-desktop-images-items {
+  width: 130px;
+  height: 130px;
+}
+
+.home-border {
+  width: 130px;
+  height: 130px;
+  border: 1px solid #e87722;
+  border-radius: 10px;
+}
+.home-border2 {
+  width: 70px;
+  height: 70px;
+  border: 1px solid #800080;
+  border-radius: 10px;
+}

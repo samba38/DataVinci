@@ -1,0 +1,116 @@
+@media (min-width: 1400px) {
+  .nav-container-desktop {
+    background-color: white;
+    padding: 40px;
+    width: 97vw;
+    height: 56.7px;
+    top: 10px;
+    left: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-container {
+    display: none; /* ❌ hide mobile navbar */
+  }
+
+  .nav-container-desktop-thin-card {
+    height: 40.8px;
+    width: 220px;
+    border: 1px solid #313131;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-container-desktop-heading {
+    color: #313131;
+    font-family: Segoe UI;
+    font-size: 13px;
+    font-weight: 400;
+  }
+  .nav-container-desktop-card {
+    display: flex;
+  }
+  .nav-container-desktop-card-paragraph {
+    color: #313131;
+    font-family: Segoe UI;
+    font-size: 18px;
+    font-weight: 400;
+  }
+  .nav-container-desktop-card-honeyCo {
+    width: 100px;
+    height: 44px;
+    margin: 10px;
+  }
+  .nav-container-desktop-sider {
+    display: flex;
+    justify-content: space-between;
+  }
+  .nav-container-desktop-pic-img {
+    width: 18px;
+    height: 18px;
+    margin: 10px;
+  }
+}
+
+/* Mobile (<=390px) */
+@media (max-width: 390px) {
+  .nav-container {
+    background-color: white;
+    padding: 20px;
+    width: 100vw;
+    height: 56.7px;
+    top: 10px;
+    left: 20px;
+    display: flex; /* ✅ show mobile navbar */
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-container-desktop {
+    display: none; /* ❌ hide desktop navbar */
+  }
+
+  .nav-img {
+    width: 16px;
+    height: 16px;
+  }
+
+  .nav-honeyCo-img {
+    width: 100px;
+    height: 44px;
+    margin-left: 20px;
+  }
+
+  .nav-sider {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .nav-pic-img,
+  .nav-Search,
+  .nav-cart-img {
+    width: 16px;
+    height: 16px;
+    margin: 8px;
+  }
+
+  .nav-cart-img {
+    height: 24px;
+  }
+  .hamburger-data {
+    padding: 10px;
+    color: #313131;
+    font-size: 15px;
+    font-weight: bold;
+  }
+  .hamburger-list {
+    list-style-type: none;
+  }
+}
